@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "newwindutils",
+	"version": "${version}",
+	"name": "NewwindUtils",
+	"description": "Utility Mod designed for Newwind",
+	"authors": [
+		"puppies__"
+	],
+	"contact": {
+		"homepage": "@puppiesarenice on discord",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/newwindutils/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.newwindutils.NewwindUtils"
+		],
+		"client": [
+			"com.newwindutils.NewwindUtilsClient"
+		]
+	},
+	"mixins": [
+		"newwindutils.mixins.json",
+		{
+			"config": "newwindutils.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
