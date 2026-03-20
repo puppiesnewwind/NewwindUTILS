@@ -1,0 +1,25 @@
+# Gradle
+.gradle
+build
+out
+
+# Loom  dev runtime
+run
+logs
+crash-reports
+
+# IntelliJ
+.idea
+.iml
+.ipr
+.iws
+
+# VS Code
+.vscode
+
+# Java
+.class
+
+# OS junk
+.DS_Store
+Thumbs.db
