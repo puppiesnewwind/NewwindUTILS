@@ -1,40 +1,25 @@
-# gradle
-
+# Gradle
 .gradle/
 build/
 out/
-classes/
 
-# eclipse
+# Loom / dev runtime
+run/
+logs/
+crash-reports/
 
-*.launch
-
-# idea
-
+# IntelliJ
 .idea/
 *.iml
 *.ipr
 *.iws
 
-# vscode
-
-.settings/
+# VS Code
 .vscode/
-bin/
-.classpath
-.project
 
-# macos
+# Java
+*.class
 
-*.DS_Store
-
-# fabric
-
-run/
-
-# java
-
-hs_err_*.log
-replay_*.log
-*.hprof
-*.jfr
+# OS junk
+.DS_Store
+Thumbs.db
