@@ -158,6 +158,7 @@ public class NewwindUtilsClient implements ClientModInitializer {
 
     private void registerTickHandler() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+
             NEARBY_INTERACTION_TRACKER.tick(
                     client,
                     WEAPON_REGISTRY,
@@ -222,13 +223,9 @@ public class NewwindUtilsClient implements ClientModInitializer {
                                     source.displayName(),
                                     entity.getName().getString()
                             );
+
                             TIMER_MANAGER.startOrRefresh(targetPlayer, source, client.player.getUUID(), currentGameTime);
                         }
-
-                        client.player.displayClientMessage(
-                                Component.literal("Started " + pending.sources().size() + " timer(s) -> " + targetPlayer.getName().getString()),
-                                true
-                        );
                     }
 
                     iterator.remove();
@@ -260,6 +257,7 @@ public class NewwindUtilsClient implements ClientModInitializer {
             }
 
             List<TrackedWeapon> sources = WEAPON_REGISTRY.findMeleeHitSources(player);
+
             if (sources.isEmpty()) {
                 return InteractionResult.PASS;
             }
